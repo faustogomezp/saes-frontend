@@ -61,8 +61,11 @@ const handleOpenConfirm = () => {
 }, []);
 
 useEffect(() => {
-  api.get('/usuarios/aa').then(res => setAas(res.data));
-}, []);
+  if (!form.campo) return;
+  api.get(`/usuarios/aa-por-campo/${form.campo}`)
+    .then(res => setAas(res.data))
+    .catch(console.error);
+}, [form.campo]);
 
   const handleChange = e => {
     setForm({
@@ -213,7 +216,7 @@ useEffect(() => {
         </MenuItem>
 
         {campos.map(c => (
-          <MenuItem key={c.id} value={c.nombre}>
+          <MenuItem key={c.id} value={c.id}>
             {c.nombre}
           </MenuItem>
         ))}
