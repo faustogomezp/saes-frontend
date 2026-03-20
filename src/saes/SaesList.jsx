@@ -260,7 +260,7 @@ export default function SaesList({ user }) {
               <TableCell>{s.numero_saes}</TableCell>
               <TableCell>{s.numero_orden_instalacion}</TableCell>
               <TableCell>{s.numero_orden_retiro || '-'}</TableCell>
-              <TableCell>{s.campo}</TableCell>
+              <TableCell>{s.nombre}</TableCell>
               <TableCell>{s.equipo}</TableCell>
               <TableCell>
                 <Chip

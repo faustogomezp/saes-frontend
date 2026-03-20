@@ -104,7 +104,7 @@ const retirarSaes = async () => {
       <Typography><b>N° SAES:</b> {saes.numero_saes}</Typography>
       <Typography><b>Orden de instalación:</b> {saes.numero_orden_instalacion}</Typography>
       <Typography><b>Orden de Retiro:</b> {saes.numero_orden_retiro || '-'}</Typography>
-      <Typography><b>Campo:</b> {saes.campo}</Typography>
+      <Typography><b>Campo:</b> {saes.nombre}</Typography>
       <Typography><b>Equipo:</b> {saes.equipo}</Typography>
       <Typography><b>Actividad:</b> {saes.actividad}</Typography>
       <Typography><b>Estado:</b> {saes.estado}</Typography>
